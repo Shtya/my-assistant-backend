@@ -24,7 +24,7 @@ async function bootstrap() {
     exposedHeaders: 'Content-Length,Content-Range',
   });
 
-  app.setGlobalPrefix('api/v1');
+  // app.setGlobalPrefix('api/v1');
 
   const loggingValidationPipe = app.get(LoggingValidationPipe);
   app.useGlobalPipes(loggingValidationPipe);
