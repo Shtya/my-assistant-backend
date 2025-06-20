@@ -5,7 +5,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { User, UserRole } from 'entities/user.entity';
 import { Repository } from 'typeorm';
 import { randomInt } from 'crypto';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import { MailService } from 'common/nodemailer';
 import { CreateUserDto } from 'dto/user.dto';
 
