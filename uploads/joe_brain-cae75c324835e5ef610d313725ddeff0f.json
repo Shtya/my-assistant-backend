@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "61d3fff4-bd51-46d9-8970-e0af73de8aa9",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23301799",
+		"_collection_link": "https://abdullah-7247.postman.co/workspace/venuat-backend-~8ad624ca-eb0e-4b15-8d41-df0b7fee001c/collection/23301799-61d3fff4-bd51-46d9-8970-e0af73de8aa9?action=share&source=collection_link&creator=23301799"
+	},
+	"item": [
+		{
+			"name": "Sign in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"pm.environment.set(\"accessToken\", jsonData.accessToken);\r",
+							"pm.environment.set(\"refreshToken\", jsonData.refreshToken);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"shtya54@gmail.com\",\r\n  \"password\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://joebrain-apis.codelooms.dev/api/v1/auth/signin",
+					"protocol": "https",
+					"host": [
+						"joebrain-apis",
+						"codelooms",
+						"dev"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

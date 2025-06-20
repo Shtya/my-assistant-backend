@@ -1,0 +1,31 @@
+ssh root@64.227.37.118
+cd /var/www/venuat-backend2
+
+sudo chown -R $USER:$USER /var/www/api.joe13.com
+
+git pull
+npm i 
+npm run build
+
+
+pm2 list 0
+pm2 restart 0
+pm2 logs 0
+
+
+
+
+// soomha
+ssh root@206.189.119.110
+cd /var/www/www.soomha.net 
+
+
+
+// washak 
+npm run build
+npm install -g http-server
+pm2 start "http-server build -p 3000" --name washak
+
+
+// joe-13
+ssh root@146.190.169.246
